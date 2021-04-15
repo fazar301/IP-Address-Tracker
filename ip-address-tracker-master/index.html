@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | IP Address Tracker</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    body{
+      overflow-x: hidden;
+    }
+    .map{
+      width: 100%;
+      height: 50vh;
+      position: fixed;
+      bottom: 0;
+      transform: scale(1.5);
+      background: #eee;
+    }
+    .attribution { font-size: 11px; text-align: center; z-index: 999; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: max-content;}
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+
+  <!-- leaflet css -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+  integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+  crossorigin=""/>
+  <!-- leaflet js -->
+ <!-- Make sure you put this AFTER Leaflet's CSS -->
+ <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+   crossorigin=""></script>
+
+   <!-- google font -->
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet"> 
+
+   <!-- my css -->
+   <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+<h2>IP Address Tracker</h2>
+  <form>
+    <input type="text" title="location" placeholder="Search for any IP address or domain">
+    <button><img src="images/icon-arrow.svg"></button>
+  </form>
+  <div class="data">
+    <div class="card">
+      <div class="judul">IP ADDRESS</div>
+      <h3 class="ip">--</h3>
+    </div>
+    <div class="card">
+      <div class="judul">LOCATION</div>
+      <h3 class="loc">--</h3>
+    </div>
+    <div class="card">
+      <div class="judul">TIME ZONE</div>
+      <h3 class="time">--</h3>
+    </div>
+    <div class="card">
+      <div class="judul">ISP</div>
+      <h3 class="isp">--</h3>
+    </div>
+  </div>
+</header>
+  <div id="map" class="map"></div>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://www.facebook.com/deadpool192929/">Fajar</a>.
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
